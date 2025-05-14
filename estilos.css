@@ -2,6 +2,12 @@
   /* Fontes */
   --fonte-corpo: "Inter", sans-serif;
   --fonte-titulos: "Bai Jamjuree", sans-serif;
+  --font-size-xl: 3.75rem;
+  --font-size-l: 2rem;
+  --font-size-m: 1.25rem;
+  --font-size-b: 1rem;
+  --font-size-s: 0.75rem;
+
 
   /* Cores */
   --cor-texto: #6e859f;
@@ -32,6 +38,8 @@
   --gap-l: 2rem;
   --gap-xl: 3rem;
   --gap-2xl: 4rem;
+
+
 }
 
 h1,
@@ -40,7 +48,7 @@ h3,
 h4,
 h5 {
   font-family: var(--fonte-titulos);
-  font-size: 60px;
+  font-size: var(--font-size-xl);
   font-weight: 700;
 }
 
@@ -76,8 +84,8 @@ body {
   gap: var(--gap-m);
 }
 
-.cabecalho__item > a {
-  font-size: 16px;
+.cabecalho__item>a {
+  font-size: var(--font-size-b);
   font-weight: 500;
   color: var(--cor-texto);
   text-decoration: none;
@@ -93,8 +101,8 @@ body {
   gap: var(--gap-s);
 }
 
-.cabecalho__botoes > a {
-  font-size: 12px;
+.cabecalho__botoes>a {
+  font-size: var(--font-size-s);
 }
 
 .cabecalho__divisor {
@@ -111,7 +119,7 @@ body {
   padding: var(--padding-xs) var(--padding-l);
   border: none;
   border-radius: 200px;
-  font-size: 16px;
+  font-size: var(--font-size-b);
   font-weight: 600;
 }
 
@@ -153,14 +161,14 @@ body {
   color: var(--cor-titulo);
   margin-bottom: 0;
 
-  & > span {
+  &>span {
     color: var(--cor-destaque-roxo);
   }
 }
 
 .banner__descricao {
   color: var(--cor-texto);
-  font-size: 20px;
+  font-size: var(--font-size-m);
 }
 
 .quem-somos {
@@ -180,7 +188,7 @@ body {
 .quem-somos__titulo {
   color: var(--cor-titulo);
 
-  & > span {
+  &>span {
     color: var(--cor-destaque-roxo);
   }
 }
@@ -194,7 +202,7 @@ body {
 .quem-somos__descricao {
   color: var(--cor-texto);
 
-  & > strong {
+  &>strong {
     color: var(--cor-titulo);
   }
 }
@@ -214,7 +222,7 @@ body {
 .sobre-nos__titulo {
   color: var(--cor-titulo);
 
-  & > span {
+  &>span {
     color: var(--cor-destaque-roxo);
   }
 }
@@ -229,8 +237,8 @@ body {
 .sobre-nos__beneficios--card {
   width: 33.33%;
 
-  & > h3 {
-    font-size: 20px;
+  &>h3 {
+    font-size: var(--font-size-m);
     text-transform: uppercase;
     padding: var(--padding-m) 0;
   }
@@ -247,9 +255,9 @@ body {
     color: var(--cor-titulo-verde);
   }
 
-  & > p {
+  &>p {
     color: var(--cor-texto);
-    font-size: 20px;
+    font-size: var(--font-size-m);
   }
 }
 
@@ -258,7 +266,7 @@ body {
   flex-direction: column;
   position: relative;
 
-  & > div[class="container"] {
+  &>div[class="container"] {
     display: flex;
     flex-direction: column;
     gap: var(--gap-2xl);
@@ -273,7 +281,7 @@ body {
 .nosso-impacto__titulo {
   color: var(--cor-titulo);
 
-  & > span {
+  &>span {
     color: var(--cor-destaque-roxo);
   }
 }
@@ -285,13 +293,13 @@ body {
   flex-wrap: wrap;
   gap: var(--gap-l);
 
-  & > div > h3 {
-    font-size: 32px;
+  &>div>h3 {
+    font-size: var(--font-size-l);
     font-weight: 700;
     padding-bottom: var(--padding-xs);
   }
 
-  & > div > p {
+  &>div>p {
     color: var(--cor-texto);
   }
 }
@@ -306,7 +314,7 @@ body {
 }
 
 .nosso-impacto__estatistica.impacto-estudantes {
-  & > h3 {
+  &>h3 {
     color: var(--cor-subtitulo-azul);
   }
 
@@ -316,7 +324,7 @@ body {
 }
 
 .nosso-impacto__estatistica.impacto-professores {
-  & > h3 {
+  &>h3 {
     color: var(--cor-destaque-roxo);
   }
 
@@ -326,7 +334,7 @@ body {
 }
 
 .nosso-impacto__estatistica.impacto-escolas {
-  & > h3 {
+  &>h3 {
     color: var(--cor-titulo-verde);
   }
 
@@ -344,13 +352,13 @@ body {
 .vantagens {
   background-image: var(--vantagens-background-gradiente);
 
-  & > div[class="container"] {
+  &>div[class="container"] {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5rem 0;
 
-    & > a:hover {
+    &>a:hover {
       transition: 0.2s ease-in;
       background-color: var(--cor-destaque-roxo);
       color: var(--cor-texto-branco);
@@ -371,15 +379,15 @@ body {
   width: 40%;
   gap: var(--gap-m);
 
-  & > h2 {
+  &>h2 {
     color: var(--cor-titulo);
 
-    & > span {
+    &>span {
       color: var(--cor-titulo-verde);
     }
   }
 
-  & > p.vantagens__descricao {
+  &>p.vantagens__descricao {
     color: var(--cor-texto);
     text-align: justify;
   }
@@ -405,10 +413,10 @@ body {
   display: flex;
   flex-direction: column;
 
-  & > h2 {
+  &>h2 {
     color: var(--cor-titulo);
 
-    & > span {
+    &>span {
       color: var(--cor-destaque-roxo);
     }
   }
@@ -439,10 +447,10 @@ body {
   scroll-snap-align: start;
   scroll-padding-left: 20px;
 
-  & > h3 {
+  &>h3 {
     font-family: var(--fonte-corpo);
     font-weight: 700;
-    font-size: 20px;
+    font-size: var(--font-size-m);
   }
 }
 
@@ -451,12 +459,12 @@ body {
   justify-content: space-between;
   width: 100%;
 
-  & > a {
+  &>a {
     text-decoration: none;
     color: var(--cor-destaque-roxo);
   }
 
-  & > span {
+  &>span {
     color: var(--cor-texto);
     font-weight: 700;
     padding: var(--padding-2xs) var(--padding-xs);
@@ -483,7 +491,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
-  & > div[class="container"] {
+  &>div[class="container"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -497,11 +505,11 @@ body {
   align-items: start;
   gap: var(--gap-l);
 
-  & > img {
+  &>img {
     padding-bottom: var(--padding-l);
   }
 
-  & > .subtitulo {
+  &>.subtitulo {
     color: var(--cor-destaque-amarelo);
   }
 }
@@ -511,7 +519,7 @@ body {
   font-weight: 600;
   padding-bottom: var(--padding-m);
 
-  & > span {
+  &>span {
     color: var(--cor-destaque-rosa);
   }
 }
@@ -536,9 +544,9 @@ body {
   padding: var(--padding-m);
   border-radius: 10px;
 
-  & > h3 {
+  &>h3 {
     color: var(--cor-titulo-vermelho);
-    font-size: 20px;
+    font-size: var(--font-size-m);
     text-align: center;
   }
 }
@@ -549,11 +557,11 @@ body {
   padding: 0;
   gap: var(--gap-s);
 
-  & > label {
+  &>label {
     color: var(--cor-titulo);
   }
 
-  & > input {
+  &>input {
     padding: var(--padding-2xs);
     background-color: var(--cor-container-impacto);
     border: none;
@@ -564,18 +572,19 @@ body {
     }
   }
 
-  & > select {
+  &>select {
     background-color: var(--cor-container-impacto);
     border: none;
     color: var(--cor-texto);
     padding: var(--padding-2xs);
   }
 
-  & > textarea {
+  &>textarea {
     background-color: var(--cor-container-impacto);
     border: none;
     border-radius: 4px;
     padding: var(--padding-2xs);
+
     &::placeholder {
       color: var(--cor-texto);
     }
@@ -594,7 +603,7 @@ body {
   align-items: start;
   gap: var(--gap-m);
 
-  & > p {
+  &>p {
     line-height: 150%;
   }
 }
@@ -605,12 +614,12 @@ body {
   align-items: start;
   gap: var(--gap-s);
 
-  & > h4 {
+  &>h4 {
     color: var(--cor-texto);
-    font-size: 16px;
+    font-size: var(--font-size-b);
   }
 
-  & > a {
+  &>a {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 150%;
