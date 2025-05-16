@@ -1,7 +1,9 @@
 :root {
+  font-size: 16px;
+
   /* Fontes */
-  --fonte-corpo: "Inter", sans-serif;
-  --fonte-titulos: "Bai Jamjuree", sans-serif;
+  --font-corpo: "Inter", sans-serif;
+  --font-titulos: "Bai Jamjuree", sans-serif;
   --font-size-xl: 3.75rem;
   --font-size-l: 2rem;
   --font-size-m: 1.25rem;
@@ -47,19 +49,23 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--fonte-titulos);
+  font-family: var(--font-titulos);
   font-size: var(--font-size-xl);
   font-weight: 700;
 }
 
 body {
-  font-family: var(--fonte-corpo);
+  font-family: var(--font-corpo);
   box-sizing: border-box;
 }
 
 .container {
   width: 1192px;
   margin: 0 auto;
+
+  @media(max-width: 768px) {
+    width: 674px
+  }
 }
 
 .cabecalho {
@@ -84,12 +90,24 @@ body {
   gap: var(--gap-m);
 }
 
+.cabecalho__item:nth-child(6) {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: inline;
+  }
+}
+
 .cabecalho__item>a {
   font-size: var(--font-size-b);
   font-weight: 500;
   color: var(--cor-texto);
   text-decoration: none;
   transition: 0.2s ease-in;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-s);
+  }
 
   &:hover {
     color: var(--cor-destaque-roxo);
@@ -99,6 +117,16 @@ body {
 .cabecalho__botoes {
   display: flex;
   gap: var(--gap-s);
+
+  @media (max-width: 768px) {
+    &>a.btn__primario {
+      text-align: center;
+    }
+
+    &>a.btn__secundario {
+      display: none;
+    }
+  }
 }
 
 .cabecalho__botoes>a {
@@ -448,7 +476,7 @@ body {
   scroll-padding-left: 20px;
 
   &>h3 {
-    font-family: var(--fonte-corpo);
+    font-family: var(--font-corpo);
     font-weight: 700;
     font-size: var(--font-size-m);
   }
