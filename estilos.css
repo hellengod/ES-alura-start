@@ -374,7 +374,7 @@ body {
   padding: var(--padding-l) 5.5rem;
   border: 1px solid transparent;
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     flex: 1 1 50px;
     max-width: 25%;
   }
@@ -426,6 +426,10 @@ body {
     align-items: center;
     padding: 5rem 0;
 
+    @media (max-width:768px) {
+      gap: var(--gap-xl);
+    }
+
     &>a:hover {
       transition: 0.2s ease-in;
       background-color: var(--cor-destaque-roxo);
@@ -458,6 +462,10 @@ body {
   &>p.vantagens__descricao {
     color: var(--cor-texto);
     text-align: justify;
+
+    @media(max-width:768px){
+      text-align: normal;
+    }
   }
 }
 
